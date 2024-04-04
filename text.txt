@@ -37,3 +37,138 @@ $response = ['success' => $authenticated];
 header('Content-Type: application/json');
 
 ?>
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("background2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner{
+    width: 450px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background: transparent;
+    z-index: 100;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.banner h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.banner p {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.banner .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.banner .forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.forget a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+.banner .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0 .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.banner .not-register {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px 0 15px;
+}
+
+.not-register {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.not-register p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.not-register p a:hover{
+    text-decoration: underline;
+}

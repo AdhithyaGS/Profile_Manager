@@ -7,12 +7,12 @@ function auth() {
     formData.append('password', password);
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/Project/Profile Manager/php/login.php", true);
+    xhr.open("POST", "http://localhost/Project/Project_Manager/php/login.php", true);
     xhr.onload = function () {
         if (xhr.status == 200) {
             var response = JSON.parse(xhr.responseText);
             if (response.success) {
-                window.location.href = "http://localhost/Project/Profile Manager/profile.html";
+                window.location.href = "http://localhost/Project/Project_Manager/profile.html";
             } else {
                 alert("Incorrect email or password. Please try again.");
             }

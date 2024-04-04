@@ -13,23 +13,31 @@ body{
     background: url("background2.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .banner{
-    width: 450px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #fff;
-    background: transparent;
-    z-index: 100;
-    padding: 0 40px;
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+    color: #fff;
+
+}
+
+.login-container{
+    position: absolute;
+    left: 4px;
+    width: 500px;
+    display: flex;
     flex-direction: column;
-
-
+    transition: .5s ease-in-out;
 }
 
 .banner h1 {
