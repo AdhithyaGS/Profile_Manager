@@ -12,12 +12,12 @@ function submitform() {
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/Project/Project_Manager/php/register.php", true);
+    xhr.open("POST", "http://localhost/Project/Profile_Manager/php/register.php", true);
     xhr.onload = function () {
         if (xhr.status == 200) {
             var response = JSON.parse(xhr.responseText);
             if (response.success) {
-                window.location.href = "http://localhost/Project/Project_Manager/login.html";
+                window.location.href = "http://localhost/Project/Profile_Manager/login.html";
                 alert("Successfully Registered...");
             } else {
                 alert("Username or Email Already Existed.");
