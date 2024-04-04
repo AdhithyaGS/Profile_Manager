@@ -1,0 +1,39 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function submit_form(){
+            var name = $('input[name=fullName]');
+            var username = $('input[name=username]');
+            var email = $('input[name=email]');
+            var password = $('input[name=password]');
+            var formdata = {name:name, username:username, email:email, password:password};
+
+            $.ajax({
+                url:"http://localhost/Project/php/register.php",
+                type:'POST',
+                data: formdata,
+                success:function(response){
+                    
+                }
+            })
+        }
+    </script>
+
+
+
+
+    $authenticated = false;
+    
+$conn= mysqli_connect("$host","$uname","$pass","$database");
+
+
+    $check = "SELECT * FROM reg_detail WHERE Email_ID='$email' and password='$password'";
+    $result = mysqli_query($conn, $check);
+    $count = mysqli_num_rows($result);
+    if($count == 1){
+        $authenticated = True;
+    }
+
+$response = ['success' => $authenticated];
+header('Content-Type: application/json');
+
+?>
